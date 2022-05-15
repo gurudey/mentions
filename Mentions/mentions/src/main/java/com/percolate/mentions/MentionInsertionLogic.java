@@ -89,7 +89,7 @@ class MentionInsertionLogic {
         final int cursorPosition = editText.getSelectionEnd();
         final String text = editText.getText().toString();
         final String toReplace = text.substring(0, cursorPosition);
-        final int start = toReplace.lastIndexOf("@");
+        final int start = toReplace.lastIndexOf("");
 
         if (start != -1) {
             final int newCursorPosition = start + mention.getMentionName().length() + 1;
